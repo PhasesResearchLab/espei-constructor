@@ -33,7 +33,7 @@ specs:
   - libpython [win]
   - espei >=0.6.1
 
-post_install: post.bat  [win]
+post_install: winpost.bat  [win]
 ignore_duplicate_files: True
 install_in_dependency_order: True
 conda_default_channels:
