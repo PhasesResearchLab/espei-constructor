@@ -46,3 +46,7 @@ script:
   - constructor -v --output-dir=constructor --platform=$BLD_PLTFRM constructor
   # TODO:
   - echo "Uploading build to S3"
+
+
+notifications:
+  email: False
