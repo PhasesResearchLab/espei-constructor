@@ -35,7 +35,7 @@ install:
   - echo $TRAVIS_PYTHON_VERSION
   # install pillow to work around a Windows issue: https://github.com/python-pillow/Pillow/issues/2945
   - conda config --add channels conda-forge
-  - conda install 'pillow>=5'
+  - conda install 'pillow==4.0.0'
   - conda install 'constructor>=2.2.0'
   - constructor -V
 
@@ -53,4 +53,5 @@ script:
 
 notifications:
   email: False
+
 
