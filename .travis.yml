@@ -51,7 +51,14 @@ script:
   - echo "Starting build for $BLD_PLTFRM"
   - constructor -v --output-dir=build --platform=$BLD_PLTFRM constructor
 
+after_sucess:
+  - echo "Build artifacts to be uploaded... `git ls-files -o --exclude-standard`"
+
 notifications:
   email: False
 
-
+addons:
+  artifacts:
+    s3_region: "us-east-1" # defaults to "us-east-1"
+    paths:
+      - $(git ls-files -o --exclude-standard | tr "\n" ":")
