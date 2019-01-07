@@ -39,7 +39,7 @@ script:
       export BLD_PLTFRM="win-64";
     elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       export BLD_PLTFRM="osx-64";
-    elif [[ $"TRAVIS_OS_NAME" == "linux"]]; then
+    elif [[ "$TRAVIS_OS_NAME" == "linux"]]; then
       export BLD_PLTFRM="linux-64";
     fi
   - echo "Starting build for $BLD_PLTFRM"
