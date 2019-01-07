@@ -11,7 +11,7 @@ matrix:
       python: "3.6"
     - os : osx
       python: "3.6"
-      language: python
+      language: generic
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
@@ -44,11 +44,10 @@ script:
     elif [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       export BLD_PLTFRM="linux-64";
     fi
+  - mkdir build
   - echo "Starting build for $BLD_PLTFRM"
-  - constructor -v --output-dir=constructor --platform=$BLD_PLTFRM constructor
-  # TODO:
-  - echo "Uploading build to S3"
-
+  - constructor -v --output-dir=build --platform=$BLD_PLTFRM constructor
 
 notifications:
   email: False
+
