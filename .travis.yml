@@ -11,6 +11,7 @@ matrix:
       python: "3.6"
     - os : osx
       python: "3.6"
+      language: python
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
@@ -32,9 +33,10 @@ install:
   - conda update -q conda
   - echo $TRAVIS_OS_NAME
   - echo $TRAVIS_PYTHON_VERSION
-  - conda install constructor
+  - conda install 'constructor>=2.2.0'
+  - constructor -V
 
-script: 
+script:
   - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
       export BLD_PLTFRM="win-64";
     elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
