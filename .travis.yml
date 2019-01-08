@@ -68,5 +68,6 @@ addons:
     paths:
       - $(git ls-files -o --exclude-standard | tr "\n" ":")
     target_paths:
-      - / 
+      - /
     working_dir: build
+    acl: public_read
