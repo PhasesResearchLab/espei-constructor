@@ -50,6 +50,7 @@ script:
   - mkdir build
   - echo "Starting build for $BLD_PLTFRM"
   - constructor -v --output-dir=build --platform=$BLD_PLTFRM constructor
+  - ls build
 
 after_sucess:
   - echo "Build artifacts to be uploaded... `git ls-files -o --exclude-standard`"
