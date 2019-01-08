@@ -35,3 +35,19 @@ build_script:
   - "constructor -v --output-dir=build --platform=win-64 constructor"
   - "dir build"
 
+artifacts:
+  path: 'build\*.exe'
+  name: constructorbuild
+
+deploy:
+  provider: S3
+  access_key_id:
+    secure: 4PjdILhPRHsuzqYYXK3FEKUcphGzoPaC8e40yr4Do3Y=
+  secret_access_key:
+    secure: YX0PeKHu8JN82Sb2GckZDFwy5EVZDWMp/NKGttO7yBYkuzvssmJNz2/g2mWr2DXU
+  bucket: espei-deploy
+  region: us-east-1
+  unzip: false
+  set_public: true
+  folder: /
+  artifact: constructorbuild
