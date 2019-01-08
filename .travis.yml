@@ -63,3 +63,5 @@ addons:
     s3_region: "us-east-1" # defaults to "us-east-1"
     paths:
       - $(git ls-files -o --exclude-standard | tr "\n" ":")
+    target_paths:
+      - / 
