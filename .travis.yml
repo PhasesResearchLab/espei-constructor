@@ -70,4 +70,4 @@ addons:
     target_paths:
       - /
     working_dir: build
-    permissions: public
+    permissions: public-read
