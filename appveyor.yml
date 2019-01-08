@@ -31,12 +31,11 @@ install:
   - "conda install 'constructor>=2.2.0'"
 
 build_script:
-  - "mkdir build"
-  - "constructor -v --output-dir=build --platform=win-64 constructor"
-  - "dir build"
+  - "constructor -v --output-dir=. --platform=win-64 constructor"
+  - "dir"
 
 artifacts:
-  path: 'build\*.exe'
+  path: '*.exe'
   name: constructorbuild
 
 deploy:
