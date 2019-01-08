@@ -65,3 +65,4 @@ addons:
       - $(git ls-files -o --exclude-standard | tr "\n" ":")
     target_paths:
       - / 
+    working_dir: build
