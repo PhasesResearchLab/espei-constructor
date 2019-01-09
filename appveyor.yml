@@ -28,9 +28,10 @@ install:
   - "conda config --add channels msys2"
   - "conda config --add channels pycalphad"
   - "conda install 'pillow==4.0.0'"
-  - "conda install 'constructor>=2.2.0'"
+  - "conda install 'constructor>=2.2.0'  'pyyaml'"
 
 build_script:
+  - "python configure.py"
   - "constructor -v --output-dir=. --platform=win-64 constructor"
   - "dir"
 

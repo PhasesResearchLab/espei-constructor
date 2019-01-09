@@ -40,10 +40,11 @@ install:
   - conda config --add channels conda-forge
   - conda config --add channels pycalphad
   - conda install 'pillow==4.0.0'
-  - conda install 'constructor>=2.2.0'
+  - conda install 'constructor>=2.2.0' 'pyyaml'
   - constructor -V
 
 script:
+  - "python configure.py"
   - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then
       export BLD_PLTFRM="win-64";
     elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
