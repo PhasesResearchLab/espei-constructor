@@ -29,8 +29,6 @@ specs:
   - cython >=0.24
   - ipopt >=3.12.8
   - pycalphad =={1}
-  - m2w64-toolchain [win]
-  - libpython [win]
   - espei =={0}
 
 post_install: winpost.bat  [win]
@@ -40,7 +38,6 @@ conda_default_channels:
     - https://conda.anaconda.org/pycalphad
     - https://conda.anaconda.org/conda-forge
     - https://conda.anaconda.org/anaconda
-    - http://repo.anaconda.com/pkgs/msys2 [win]
 
 license_file: EULA.txt
 
