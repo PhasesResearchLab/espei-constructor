@@ -10,7 +10,8 @@ specs:
   - python 3.6*
   - conda
   - notebook
-  - jupyter
+  - jupyterlab
+  - menuinst
   - setuptools
   - matplotlib
   - numexpr
