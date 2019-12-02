@@ -3,7 +3,7 @@
 environment:
   matrix:
     - PYTHON: "C:\\Python36-conda64"
-      PYTHON_VERSION: "3.6"
+      PYTHON_VERSION: "3.7"
       PYTHON_ARCH: "64"
 
 install:
@@ -25,9 +25,8 @@ install:
   - "conda create -n condaenv python=%PYTHON_VERSION%"
   - "activate condaenv"
   - "conda config --add channels conda-forge"
-  - "conda config --add channels msys2"
   - "conda config --add channels pycalphad"
-  - "conda install 'pillow==4.0.0'"
+  - "conda install 'pillow==6.2.1'"
   - "conda install 'constructor>=2.2.0'  'pyyaml'"
 
 build_script:

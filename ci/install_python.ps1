@@ -8,10 +8,10 @@ $BASE_URL = "https://www.python.org/ftp/python/"
 
 function DownloadMiniconda ($python_version, $platform_suffix) {
     $webclient = New-Object System.Net.WebClient
-    if ($python_version -eq "3.5") {
-        $filename = "Miniconda3-4.3.30-Windows-" + $platform_suffix + ".exe"
+    if ($python_version -eq "3.7") {
+        $filename = "Miniconda3-4.7.12.1-Windows-" + $platform_suffix + ".exe"
     } else {
-        $filename = "Miniconda2-4.3.30-Windows-" + $platform_suffix + ".exe"
+        $filename = "Miniconda3-latest-Windows-" + $platform_suffix + ".exe"
     }
     $url = $MINICONDA_URL + $filename
 

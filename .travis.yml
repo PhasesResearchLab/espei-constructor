@@ -5,7 +5,7 @@ matrix:
   include:
     - os : linux
       language: python
-      python: "3.6"
+      python: "3.7"
 # Travis secrets break Windows builds. When this issue is resolved, Windows builds should work.
 # See https://travis-ci.community/t/choco-install-hangs-forever/307
 # https://travis-ci.community/t/current-known-issues-please-read-this-before-posting-a-new-topic/264
@@ -13,7 +13,7 @@ matrix:
 #      language : shell
 #      python: "3.6"
     - os : osx
-      python: "3.6"
+      python: "3.7"
       language: generic
 
 before_install:
@@ -39,7 +39,7 @@ install:
   # install pillow to work around a Windows issue: https://github.com/python-pillow/Pillow/issues/2945
   - conda config --add channels conda-forge
   - conda config --add channels pycalphad
-  - conda install 'pillow==4.0.0'
+  - conda install 'pillow==6.2.1'
   - conda install 'constructor>=2.2.0' 'pyyaml'
   - constructor -V
 
