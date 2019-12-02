@@ -7,11 +7,13 @@ channels:
     - https://conda.anaconda.org/pycalphad
     - http://repo.anaconda.com/pkgs/msys2 [win]
 specs:
-  - python 3.6*
+  - python 3.7*
   - conda
   - notebook
   - jupyterlab
   - setuptools
+  - c-compiler
+  - cxx-compiler
   - matplotlib
   - numexpr
   - pandas
@@ -22,8 +24,8 @@ specs:
   - pyparsing
   - tinydb
   - scipy
-  - dask >=0.18
-  - distributed
+  - dask >=2
+  - distributed >=2
   - numpy >=1.9
   - dill
   - cython >=0.24
